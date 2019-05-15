@@ -1,6 +1,9 @@
 # lua_redis_restore
 A Lua example to backup and restore redis in lua
 
+Require LuaRocks libs:
+ - serpent
+ - redis
 
 ----------- 
 permissions:
