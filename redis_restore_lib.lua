@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 require 'redis'
 local serpent = require 'serpent'
 local redis = Redis.connect()
