@@ -62,7 +62,6 @@ function redis_tools.backup(search_query, file_write)
     file:close()
     return true, "ok"
 end
-
 function redis_tools.restore(file_restore)
     local dump_file, time_in_start
     local data_key, total = 0
