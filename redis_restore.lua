@@ -30,7 +30,7 @@ elseif arg[1] == "backup" then
     end
     data_search = redis:keys("*"..search_query.."*")
     if #data_search == 0 then
-        io.stderr:write(lua_script_name..": Redis doesn't have any keys.")
+        io.stderr:write(lua_script_name..": search query doesn't have results.")
         os.exit(1)
     end
     for k,key in pairs(data_search) do
@@ -90,6 +90,7 @@ elseif arg[1] == "restore" then
         io.stderr:write(lua_script_name..": not found file "..file_restore..".lua")
         os.exit(1)
     end
+    dump_file:close()
     dump_file = require(file_restore)
     time_in_start = os.time()
     for index, key in pairs(dump_file) do
