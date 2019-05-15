@@ -23,8 +23,8 @@ Library
 ----------- 
 ###### Library example:
 ```lua
-redire = require 'redis_restore_lib'
-local backup_ok = redire.backup("our_bananas", "bananas_file")
+local redire = require 'redis_restore_lib'
+local backup_ok = redire.backup("our_bananas", "bananas_file") // our_bananas is the search query
 if backup_ok then
  print("Our bananas from Redis are backed up!")
 else
