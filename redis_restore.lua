@@ -69,7 +69,7 @@ elseif arg[1] == "backup" then
                 type = type_key
             })
         end
-        to_print = string.format("Restoring key %s\n\ttype %s"..field_text.."\n\tvalue %s\n", key, type_key, value)
+        to_print = string.format("Backing key %s\n\ttype %s"..field_text.."\n\tvalue %s\n", key, type_key, value)
         print(to_print)
     end
     file = io.open(file_write, 'w+')
