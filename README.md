@@ -2,8 +2,8 @@
 A Lua example to backup and restore redis in lua
 
 Require LuaRocks libs:
- - serpent
- - redis
+ - [serpent](https://github.com/pkulchenko/serpent)
+ - [redis](https://github.com/nrk/redis-lua)
 
 Script
 ----------- 
@@ -38,3 +38,5 @@ else
  print("Our bananas from Redis aren't restored :(")
 end
 ```
+
+** sorry because i have been editing into repository :( **
