@@ -72,7 +72,7 @@ function redis_tools.restore(file_restore)
     end
     dump_file = io.open(file_restore..".lua", "r")
     if not dump_file then
-         return "file "..file_restore..".lua not found."
+         return false, "file "..file_restore..".lua not found."
     end
     dump_file:close()
     dump_file = require(file_restore)
