@@ -85,13 +85,12 @@ elseif arg[1] == "restore" then
     else
         file_restore = file_restore:gsub("%.lua$", "")
     end
-    dump_file = io.open(file_restore..".lua", "r")
+    dump_file = loadfile(file_restore..".lua")
     if not dump_file then
         io.stderr:write(lua_script_name..": not found file "..file_restore..".lua")
         os.exit(1)
     end
-    dump_file:close()
-    dump_file = require(file_restore)
+    dump_file = dump_file()
     time_in_start = os.time()
     for index, key in pairs(dump_file) do
         data_key = serpent.block(key, {comment=false})
